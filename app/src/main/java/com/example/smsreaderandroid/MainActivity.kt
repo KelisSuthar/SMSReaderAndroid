@@ -28,6 +28,10 @@ class MainActivity : AppCompatActivity() {
 
         textViewMessage = findViewById(R.id.textViewMessage)
 
+        if(!message.isNullOrEmpty()){
+            textViewMessage?.text = message
+        }
+
         if (ContextCompat.checkSelfPermission(
                 this,
                 Manifest.permission.RECEIVE_SMS
